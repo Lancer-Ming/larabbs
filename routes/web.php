@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'PagesController@root')->name('root');
+Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -40,3 +41,4 @@ Route::resource('categories', 'CategoriesController', ['only'=> ['show']]);
 Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
 
 Route::resource('notifications', 'NotificationsController', ['only'=> ['index']]);
+

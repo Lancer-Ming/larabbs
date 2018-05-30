@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b797796d6a9f8eb319de04d75fe4023",
+    "content-hash": "6230685016dffcf4f712c68d4cd9b9ed",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
@@ -1764,6 +1764,47 @@
                 "php"
             ],
             "time": "2018-03-25T17:35:16+00:00"
+        },
+        {
+            "name": "overtrue/easy-sms",
+            "version": "1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/overtrue/easy-sms.git",
+                "reference": "2a1c840d3f42287f77958df3c40366e0bf277087"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/overtrue/easy-sms/2a1c840d3f42287f77958df3c40366e0bf277087.zip",
+                "reference": "2a1c840d3f42287f77958df3c40366e0bf277087",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.2",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "mockery/mockery": "1.0.x-dev",
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Overtrue\\EasySms\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "overtrue",
+                    "email": "i@overtrue.me"
+                }
+            ],
+            "description": "The easiest way to send short message.",
+            "time": "2018-05-25T05:27:04+00:00"
         },
         {
             "name": "overtrue/laravel-lang",

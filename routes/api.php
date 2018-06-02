@@ -4,7 +4,10 @@ use Illuminate\Http\Request;
 
 $api = app('Dingo\Api\Routing\Router');
 
-$api->version('v1', ['namespace' => 'App\Http\Controllers\Api'], function($api) {
+$api->version('v1', [
+    'namespace' => 'App\Http\Controllers\Api',
+    'middleware' => 'serializer:array'
+], function($api) {
 
     // 设置的是一分钟一次
     $api->group([
@@ -30,6 +33,11 @@ $api->version('v1', ['namespace' => 'App\Http\Controllers\Api'], function($api) 
         $api->delete('authorizations/current', 'AuthorizationsController@destroy')
             ->name('api.authorizations.destroy');
 
+
+        $api->group(['middileware' => 'api.auth'], function($api) {
+            //当前用户登录信息
+            $api->get('user', 'UsersController@me')->name('api.user.show');
+        });
     });
 
 });
